@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4" style="height : 80px;">
+        <div class="container-fluid nav justify-content-center">
+            <a class="navbar-brand" href="#">Sorting Algorithms</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contact.html">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="sidenav">
+        <div class="title">Features</div>
+        <hr>
+        <a href="iinfo.html">What is insertion sort?</a>
+        <a href="ialgo.html">Algorithm</a>
+        <a href="icode.html">Code</a>
+        <a href="itc.html">Time Complexity</a>
+        <a href="ianimation.html">Animation</a>
+        <a href="ivideo.html">Video</a>
+        <a href="iquiz.html">Quiz</a>
+    </div>
+
+    <!-- Page content -->
+    <div class="main">
+        <h2>Algorithm of Insertion Sort</h2>
+        <pre style="font-size : 20px;">
+Insertion sort works just like how you arrange a pack of playing cards in your hand.
+1.Start with an empty hand with a pack of cards(faced down) on a table.
+2.Pick one card at a time from the table and insert it in the correct position in your hand.
+3.To find the correct position of the card, compare it with each card in the hand from right to left.
+
+Best case :
+1. Outer for loop runs for (n-1) times
+4. Inner while loop exits the loop in the very first comparison // Eg - Sorted set : 2 4 5 7, Element to insert : 9
+    1+1+1+...+(n-1) times =>  Ω(n)
+
+Average case :
+1. Outer for loop runs for (n-1) times
+4. On average the inner while loop runs for (n-2)/2 times // Eg - Sorted set : 2 4 10 12, Element to insert : 9
+     1/2+2/2+3/2+4/2+....(n-1)/2 = (1+2+3+...+(n-1))/2
+                                                    = ((n-1)*n)/4 => Θ(n2)
+
+Worst case :
+1. Outer for loop runs for (n-1) times
+4. In worst case the inner while loop runs for (n-2) times // Eg - Sorted set : 10 11 12 13, Element to insert : 9
+    1+2+3+...+(n-1) = ((n-1)*n)/2 => O(n2)
+    </pre>
+
+    </div>
+</body>
+
+</html>
